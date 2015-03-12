@@ -63,18 +63,18 @@ Import your database
 
 Export your database in an SQL file or in a compressed file.
 
-Copy it via SSH to the remote environment on Platform into the ``/app/tmp`` folder which is writable:
+Copy it via SSH to the remote environment on Platform into the ``/tmp`` folder which is writable:
 
 .. code-block:: console
 
-   $ scp database.sql [PROJECT-ID]-master@ssh.[CLUSTER].platform.sh:/app/tmp
+   $ scp database.sql [PROJECT-ID]-master@ssh.[CLUSTER].platform.sh:/tmp
 
 Log in to the environment via SSH and import the database:
 
 .. code-block:: console
 
    $ ssh [PROJECT-ID]-master@ssh.[CLUSTER].platform.sh
-   web@[PROJECT-ID]-master--php:~$ mysql -h database.internal main < tmp/database.sql
+   web@[PROJECT-ID]-master--php:~$ mysql -h database.internal main < /tmp/database.sql
 
 Import your files
 -----------------
